@@ -1,0 +1,17 @@
+
+# Python 虚拟环境
+.venv/
+
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 日志文件
+*.log
+
+# 数据集
+dataset/
+
+# 编辑器配置
+.vscode/
+.idea/
