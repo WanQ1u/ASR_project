@@ -1,5 +1,9 @@
 import logging
 
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+
 # 配置日志
 logging.basicConfig(
     filename="app.log",
@@ -33,7 +37,8 @@ def read_audio(file_path):
 
 
 # 调用函数
-audio_data = read_audio("audio.wav")
+audio_path = BASE_DIR / "audio.wav"
+audio_data = read_audio(audio_path)
 
 if audio_data is not None:
     print("音频读取成功")
