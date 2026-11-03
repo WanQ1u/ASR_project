@@ -1,36 +1,38 @@
 import logging
 
+# 配置日志
 logging.basicConfig(
     filename="app.log",
-    filemode="a",
+    filemode="w",
     level=logging.INFO,
     format="%(asctime)s %(levelname)s %(message)s"
 )
+
 
 def read_audio(file_path):
     logging.info("开始读取音频：%s", file_path)
 
     try:
-        f = open(file_path, "rb")
-        data = f.read()
+        # 以二进制模式打开音频文件
+        with open(file_path, "rb") as f:
+            data = f.read()
 
         logging.info("音频读取成功，大小：%d bytes", len(data))
         return data
 
     except FileNotFoundError:
         logging.exception("音频文件不存在")
+        return None
 
     except PermissionError:
         logging.exception("没有权限读取音频文件")
+        return None
 
     finally:
-        if "f" in locals():
-            f.close()
-            logging.info("音频文件已关闭")
-
-    return None
+        logging.info("音频读取操作结束")
 
 
+# 调用函数
 audio_data = read_audio("audio.wav")
 
 if audio_data is not None:
