@@ -7,8 +7,12 @@ logging.basicConfig(
 )
 
 logging.info("Program started")
-logging.info("Loading model")
-logging.warning("GPU memory is running low")
-logging.error("Model loading failed")
+
+try:
+    with open("audio.wav", "r") as f:
+        data = f.read()
+
+except FileNotFoundError:
+    logging.exception("Failed to load audio file")
 
 print("Program finished")
