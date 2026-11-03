@@ -1,12 +1,14 @@
-import numpy as np
-import requests
+import logging
 
-numbers = np.array([10, 20, 30, 40, 50])
+logging.basicConfig(
+    filename="app.log",
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s %(message)s"
+)
 
-print("ASR Project started!")
-print("平均值：", np.mean(numbers))
+logging.info("Program started")
+logging.info("Loading model")
+logging.warning("GPU memory is running low")
+logging.error("Model loading failed")
 
-response = requests.get("https://httpbin.org/get", timeout=10)
-print("HTTP 状态码：", response.status_code)
-
-print("Version 2")
+print("Program finished")
