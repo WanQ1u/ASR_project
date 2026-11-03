@@ -44,3 +44,7 @@ if audio_data is not None:
     print("音频读取成功")
 else:
     print("音频读取失败")
+
+import time
+
+time.sleep(30)
