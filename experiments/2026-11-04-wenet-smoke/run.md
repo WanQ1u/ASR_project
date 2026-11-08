@@ -17,7 +17,7 @@ Run the official WeNet recognizer on five Mandarin WAV clips as an execution qua
 - Checkpoint archive: `aishell_u2pp_conformer_exp.tar.gz`
 - Archive SHA-256: `52e0f792ffc2806a2739a9920170ad8eb899bf25e192eefa60109a9eec82d344`
 - Archive member checkpoint: `20210601_u2++_conformer_exp_aishell/final.pt`
-- Extracted checkpoint SHA-256: record on Linux after transfer and extraction
+- Extracted checkpoint SHA-256: `f368e24e6c84aaf770ffa36e6973596274de5288810315f9b9c5f4f4037fe16d`
 
 ## Runtime record
 
