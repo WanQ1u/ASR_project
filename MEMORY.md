@@ -102,3 +102,11 @@
 - 不在 Linux 服务器直接编辑项目代码；不把 `.conda`、`.venv`、模型权重、音频和日志上传到 GitHub。
 - 后续同步路径为：Windows `git push` -> Linux `git pull` -> Linux 运行实验；实验结果摘要再由 Windows 纳入项目记录。
 
+## Linux 运行环境（2026-11-08）
+
+- 项目环境：`/home/qwh/ASR_project/mandarin-asr-baseline/.conda`，Python 3.10.22。
+- GPU runtime：PyTorch `2.9.1+cu128`、torchaudio `2.9.1+cu128`，CUDA runtime 12.8；两张 RTX 3090 可用。
+- WeNet 以 editable 方式安装，源码 commit 仍为 `be6ad97fdb512589df113042f7ff3a29d392fb38`。
+- WeNet 当前导入链需要 `whisper.tokenizer`；为避免旧版 `openai-whisper==20231117` 与 PyTorch 2.9.1 的 Triton 约束冲突，环境使用 `openai-whisper==20250625`，并保持 PyTorch 要求的 Triton `3.5.1`。`pip check` 已通过。
+- 本次环境快照写入 Linux 的 `experiments/2026-11-04-wenet-smoke/environment.txt`；该文件按规则忽略，不上传 GitHub。
+
