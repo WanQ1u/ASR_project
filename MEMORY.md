@@ -104,7 +104,7 @@
 
 ## Linux 运行环境（2026-11-08）
 
-- 项目环境：`/home/qwh/ASR_project/mandarin-asr-baseline/.conda`，Python 3.10.22。
+- 项目环境：`/home/qwh/ASR_project/.conda`，Python 3.10.22。
 - GPU runtime：PyTorch `2.9.1+cu128`、torchaudio `2.9.1+cu128`，CUDA runtime 12.8；两张 RTX 3090 可用。
 - WeNet 以 editable 方式安装，源码 commit 仍为 `be6ad97fdb512589df113042f7ff3a29d392fb38`。
 - WeNet 当前导入链需要 `whisper.tokenizer`；为避免旧版 `openai-whisper==20231117` 与 PyTorch 2.9.1 的 Triton 约束冲突，环境使用 `openai-whisper==20250625`，并保持 PyTorch 要求的 Triton `3.5.1`。`pip check` 已通过。
