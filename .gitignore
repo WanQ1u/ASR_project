@@ -1,0 +1,44 @@
+# Third-party source and reproducible-but-large experiment artifacts
+third_party/
+data/
+dataset/
+models/
+artifacts/
+experiments/**/audio/
+experiments/**/logs/
+experiments/**/environment.txt
+
+# Model weights and generated media
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.bin
+*.safetensors
+*.wav
+*.mp3
+*.flac
+*.m4a
+
+# Python environments and caches
+.conda/
+.venv/
+env/
+venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+
+# Logs, temporary outputs, and secrets
+*.log
+nohup.out
+.env
+.env.*
+*.key
+*.pem
+*.secret
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
