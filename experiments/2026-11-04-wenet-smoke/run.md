@@ -2,7 +2,7 @@
 
 ## Status
 
-Template only. No checkpoint has been downloaded and no inference result has been produced yet.
+Checkpoint archive has been downloaded locally, but it has not yet been transferred to Linux or used for inference. No inference result has been produced yet.
 
 ## Purpose
 
@@ -14,7 +14,10 @@ Run the official WeNet recognizer on five Mandarin WAV clips as an execution qua
 - WeNet commit: `be6ad97fdb512589df113042f7ff3a29d392fb38`
 - Checkpoint source: official AISHELL entry in `third_party/wenet/docs/pretrained_models.md`
 - Dataset source and license: AISHELL-1, OpenSLR SLR33, Apache License 2.0
-- Checkpoint SHA-256: record after download
+- Checkpoint archive: `aishell_u2pp_conformer_exp.tar.gz`
+- Archive SHA-256: `52e0f792ffc2806a2739a9920170ad8eb899bf25e192eefa60109a9eec82d344`
+- Archive member checkpoint: `20210601_u2++_conformer_exp_aishell/final.pt`
+- Extracted checkpoint SHA-256: record on Linux after transfer and extraction
 
 ## Runtime record
 
