@@ -46,6 +46,7 @@ def load_inputs(path: Path, project_root: Path) -> list[dict[str, str]]:
 
 def main() -> int:
     args = parse_args()
+    args.wenet_root = args.wenet_root.resolve()
     records = load_inputs(args.inputs, args.project_root.resolve())
     args.result_dir.mkdir(parents=True, exist_ok=True)
     data_list = args.result_dir / "data.list"
