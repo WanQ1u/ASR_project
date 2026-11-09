@@ -115,3 +115,9 @@
 - 官方 AISHELL U2++ checkpoint 的 `train.yaml` 保留了原始解压目录的相对路径：`exp/20210601_u2++_conformer_exp_aishell/units.txt` 和 `global_cmvn`。
 - 项目实际把权重文件放在 `models/20210601_u2++_conformer_exp_aishell/`，因此项目包装脚本通过官方 `recognize.py --override_config` 指向同目录的 `units.txt` 与 `global_cmvn`；不修改 WeNet 上游源码，也不移动或复制模型文件。
 
+## Smoke test 结果与音频加载依赖（2026-11-09）
+
+- 五段个人 WAV 的 WeNet smoke test 已在 RTX 3090 上成功运行，`ctc_greedy_search/text` 含 5 条非空转写；这只证明推理链路可用，不报告 CER，也不支持泛化结论。
+- 初次运行的空 `text` 文件由 torchaudio 2.9 的默认 TorchCodec 音频加载器缺失引起。WeNet 数据加载管线会记录该异常并跳过对应样本，因此不抛出主进程错误但得到零条预测。
+- Linux 项目环境现使用 TorchCodec 0.9.0 与 FFmpeg 7.1；单个 16 kHz、单声道 WAV 已验证可被 `torchaudio.load` 成功读取。
+

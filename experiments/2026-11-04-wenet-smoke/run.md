@@ -2,7 +2,7 @@
 
 ## Status
 
-Checkpoint archive has been downloaded locally, but it has not yet been transferred to Linux or used for inference. No inference result has been produced yet.
+Passed on 2026-11-09: the official WeNet recognizer produced one non-empty transcript for each of the five personal smoke-test WAV clips.
 
 ## Purpose
 
@@ -21,18 +21,18 @@ Run the official WeNet recognizer on five Mandarin WAV clips as an execution qua
 
 ## Runtime record
 
-Fill this section on Linux after the run:
+- Start time: 2026-11-09 21:50:00 (server-local log timestamp)
+- Host: `labserver-System`
+- GPU: NVIDIA GeForce RTX 3090 (`--gpu 0`)
+- Python / PyTorch / CUDA: Python 3.10.22 / PyTorch 2.9.1+cu128 / CUDA runtime 12.8
+- Audio loader dependencies: TorchCodec 0.9.0 and FFmpeg 7.1 in `/home/qwh/ASR_project/.conda`
+- Command: `scripts/run_wenet_smoke.py` with the fixed paths in the project README and the five-row `inputs.tsv` manifest
+- Checkpoint path: `models/20210601_u2++_conformer_exp_aishell/final.pt`
+- Checkpoint SHA-256: `f368e24e6c84aaf770ffa36e6973596274de5288810315f9b9c5f4f4037fe16d`
+- Inference success count: 5 / 5 non-empty CTC greedy-search transcripts
+- Repeat transcript match: not yet checked
 
-- Start time (UTC):
-- End time (UTC):
-- Host:
-- GPU:
-- Python / PyTorch / CUDA:
-- Exact command:
-- Checkpoint path:
-- Checkpoint SHA-256:
-- Inference success count:
-- Repeat transcript match:
+The raw audio, runtime logs, and personal transcripts remain on the Linux server and are not committed to Git.
 
 ## Interpretation
 
