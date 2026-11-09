@@ -110,6 +110,13 @@
 - WeNet 当前导入链需要 `whisper.tokenizer`；为避免旧版 `openai-whisper==20231117` 与 PyTorch 2.9.1 的 Triton 约束冲突，环境使用 `openai-whisper==20250625`，并保持 PyTorch 要求的 Triton `3.5.1`。`pip check` 已通过。
 - 本次环境快照写入 Linux 的 `experiments/2026-11-04-wenet-smoke/environment.txt`；该文件按规则忽略，不上传 GitHub。
 
+## AISHELL-1 Test-100 开发基线（2026-11-09）
+
+- 当前开发基线固定为 AISHELL-1 官方 test 划分中的 100 条语音；完整 test 集暂不运行。
+- 选择规则在查看任何预测前冻结：将官方 test utterance ID 按字典序排序，以 Python random.Random(20261109) 无放回抽取 100 条；subset manifest 将与参考文本一同提交 Git。
+- 模型、checkpoint、CTC greedy-search 解码和 GPU 设置保持 smoke test 的已验证配置；不基于该子集的结果调参。
+- AISHELL-1 官方 data_aishell.tgz 已由 Linux 服务器从 OpenSLR 直接后台下载到忽略的 data/aishell1/downloads/。当前官方源约 100 KiB/s，aria2 估算约 40 至 50 小时；下载支持断点续传，未使用 Windows 中转。
+
 ## WeNet checkpoint 路径兼容性（2026-11-09）
 
 - 官方 AISHELL U2++ checkpoint 的 `train.yaml` 保留了原始解压目录的相对路径：`exp/20210601_u2++_conformer_exp_aishell/units.txt` 和 `global_cmvn`。
