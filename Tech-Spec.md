@@ -28,6 +28,7 @@ The project Git repository tracks source, manifests, run records, and checksums 
 
 - Personal recordings are smoke-test inputs only and are excluded from CER reporting.
 - Before Week 2, one public AISHELL-1 subset and its manifest are frozen in version control.
+- The current development subset contains exactly 100 utterances from the official AISHELL-1 `test` split. Candidate utterance IDs are sorted lexicographically, then sampled without replacement with Python `random.Random(20261109)`. The resulting IDs and references are committed before inference.
 - The official AISHELL-1 test split is never used to choose a model, decoding setting, or training hyperparameter.
 - Any direct overlap between checkpoint training data and a reported evaluation set is explicitly labelled as in-domain benchmark evaluation.
 
@@ -35,6 +36,7 @@ The project Git repository tracks source, manifests, run records, and checksums 
 
 - Week 1: inference success rate and wall-clock duration only.
 - Week 2 onward: character error rate (CER), substitutions, deletions, insertions, and representative errors.
+- For every public evaluation run, record total audio duration, wall-clock decoding duration, and RTF (`wall-clock seconds / total audio seconds`).
 
 ## Verification
 

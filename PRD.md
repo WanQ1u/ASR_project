@@ -20,7 +20,7 @@ Use the WeNet repository and its AISHELL-1 U2++ Conformer checkpoint as the prim
 
 - Run official checkpoint inference on five Mandarin WAV clips.
 - Record exact repository commit, checkpoint checksum, Python/PyTorch/CUDA versions, hardware, commands, duration, and transcripts.
-- Prepare, but do not yet tune on, an AISHELL-1 evaluation subset.
+- Build one fixed 100-utterance AISHELL-1 official-test subset for the current development baseline.
 
 ## Non-goals
 
@@ -34,6 +34,8 @@ Use the WeNet repository and its AISHELL-1 U2++ Conformer checkpoint as the prim
 - A run record identifies every artifact needed to repeat the inference run.
 - The selected checkpoint's provenance and applicable dataset/model license are recorded.
 - The plan for the next week fixes an evaluation subset without using its results to alter this week's inference configuration.
+- The development subset is selected from the official AISHELL-1 test split with a recorded deterministic algorithm and seed, then frozen before any predictions are inspected.
+- The evaluation run reports CER with substitutions, deletions, and insertions, plus audio duration, wall-clock duration, and real-time factor (RTF).
 
 ## Risks
 
