@@ -110,3 +110,8 @@
 - WeNet 当前导入链需要 `whisper.tokenizer`；为避免旧版 `openai-whisper==20231117` 与 PyTorch 2.9.1 的 Triton 约束冲突，环境使用 `openai-whisper==20250625`，并保持 PyTorch 要求的 Triton `3.5.1`。`pip check` 已通过。
 - 本次环境快照写入 Linux 的 `experiments/2026-11-04-wenet-smoke/environment.txt`；该文件按规则忽略，不上传 GitHub。
 
+## WeNet checkpoint 路径兼容性（2026-11-09）
+
+- 官方 AISHELL U2++ checkpoint 的 `train.yaml` 保留了原始解压目录的相对路径：`exp/20210601_u2++_conformer_exp_aishell/units.txt` 和 `global_cmvn`。
+- 项目实际把权重文件放在 `models/20210601_u2++_conformer_exp_aishell/`，因此项目包装脚本通过官方 `recognize.py --override_config` 指向同目录的 `units.txt` 与 `global_cmvn`；不修改 WeNet 上游源码，也不移动或复制模型文件。
+

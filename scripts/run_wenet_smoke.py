@@ -47,6 +47,13 @@ def load_inputs(path: Path, project_root: Path) -> list[dict[str, str]]:
 def main() -> int:
     args = parse_args()
     args.wenet_root = args.wenet_root.resolve()
+    args.config = args.config.resolve()
+    model_dir = args.config.parent
+    symbol_table = model_dir / "units.txt"
+    cmvn_file = model_dir / "global_cmvn"
+    for artifact in (symbol_table, cmvn_file):
+        if not artifact.is_file():
+            raise FileNotFoundError(f"required checkpoint artifact does not exist: {artifact}")
     records = load_inputs(args.inputs, args.project_root.resolve())
     args.result_dir.mkdir(parents=True, exist_ok=True)
     data_list = args.result_dir / "data.list"
@@ -62,7 +69,7 @@ def main() -> int:
         "--modes",
         "ctc_greedy_search",
         "--config",
-        str(args.config.resolve()),
+        str(args.config),
         "--data_type",
         "raw",
         "--test_data",
@@ -75,6 +82,10 @@ def main() -> int:
         "1",
         "--result_dir",
         str(args.result_dir.resolve()),
+        "--override_config",
+        f"tokenizer_conf.symbol_table_path {symbol_table}",
+        "--override_config",
+        f"cmvn_conf.cmvn_file {cmvn_file}",
     ]
     print("Running official WeNet recognizer:")
     print(" ".join(command))
