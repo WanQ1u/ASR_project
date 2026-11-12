@@ -124,6 +124,8 @@
 - Linux 端慢速 aria2 下载已停止，未完成文件暂保留。
 - 已在 Windows 从官方 test 候选池（7,176 条）按 `random.Random(20261109)` 固定抽取 100 条；生成并保存 `experiments/2026-11-09-aishell1-test100/subset.tsv`。
 - 100 个 WAV 与完整官方转写文件已打包传输到 Linux；上传包 SHA-256：`b75de95ac62e701036dc2ecdb5cbca16c3df1b13034d867945f614d177bb264b`。Linux 解压后已验证 WAV 数量和清单行数均为 100。
+- AISHELL-1 Test-100 首次基线推理已完成：100/100 条有预测；字符级 CER 为 4.27%（N=1499，C=1435，S=63，D=1，I=0）；音频总时长 505.144813 秒，墙钟时间 24.204622 秒，RTF=0.047916。
+- 使用完全相同的配置重复推理后，`baseline-run-1` 与 `baseline-run-2` 的 100 条预测逐行完全一致，当前基线具备基本可重复性。
 
 ## WeNet checkpoint 路径兼容性（2026-11-09）
 

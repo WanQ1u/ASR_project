@@ -31,8 +31,9 @@ Data download and deterministic subset preparation are complete. No AISHELL-1 pr
 - Start / end time:
 - GPU / runtime:
 - Prediction coverage:
-- CER (S / D / I / N):
-- Total audio duration:
-- Wall-clock duration:
-- RTF:
-- Repeat prediction match:
+- Prediction coverage: 100 / 100
+- CER (S / D / I / N): 4.27% (S=63, D=1, I=0, N=1499, C=1435)
+- Total audio duration: 505.144813 seconds
+- Wall-clock duration: 24.204622 seconds
+- RTF: 0.047916
+- Repeat prediction match: exact match between `baseline-run-1` and `baseline-run-2` prediction files.
