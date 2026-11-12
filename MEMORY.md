@@ -115,7 +115,15 @@
 - 当前开发基线固定为 AISHELL-1 官方 test 划分中的 100 条语音；完整 test 集暂不运行。
 - 选择规则在查看任何预测前冻结：将官方 test utterance ID 按字典序排序，以 Python random.Random(20261109) 无放回抽取 100 条；subset manifest 将与参考文本一同提交 Git。
 - 模型、checkpoint、CTC greedy-search 解码和 GPU 设置保持 smoke test 的已验证配置；不基于该子集的结果调参。
-- AISHELL-1 官方 data_aishell.tgz 已由 Linux 服务器从 OpenSLR 直接后台下载到忽略的 data/aishell1/downloads/。当前官方源约 100 KiB/s，aria2 估算约 40 至 50 小时；下载支持断点续传，未使用 Windows 中转。
+- AISHELL-1 官方 `data_aishell.tgz` 曾由 Linux 服务器从 OpenSLR 直接后台下载到忽略的 `data/aishell1/downloads/`；由于速度约 100 KiB/s，该下载已停止，未完成文件暂保留作兜底。
+
+## AISHELL-1 数据归档校验（2026-11-12）
+
+- Windows 已完成下载官方 `data_aishell.tgz`，文件大小为 15,582,913,665 字节。
+- Windows SHA-256：`a4a0313cde0a933e0e01a451f77de0a23d6c942f4694af5bb7f40b9dc38143fe`。
+- Linux 端慢速 aria2 下载已停止，未完成文件暂保留。
+- 已在 Windows 从官方 test 候选池（7,176 条）按 `random.Random(20261109)` 固定抽取 100 条；生成并保存 `experiments/2026-11-09-aishell1-test100/subset.tsv`。
+- 100 个 WAV 与完整官方转写文件已打包传输到 Linux；上传包 SHA-256：`b75de95ac62e701036dc2ecdb5cbca16c3df1b13034d867945f614d177bb264b`。Linux 解压后已验证 WAV 数量和清单行数均为 100。
 
 ## WeNet checkpoint 路径兼容性（2026-11-09）
 

@@ -2,7 +2,7 @@
 
 ## Status
 
-Data download and deterministic subset preparation are in progress. No AISHELL-1 prediction or CER has been inspected.
+Data download and deterministic subset preparation are complete. No AISHELL-1 prediction or CER has been inspected.
 
 ## Frozen Evaluation Policy
 
@@ -17,7 +17,13 @@ Data download and deterministic subset preparation are in progress. No AISHELL-1
 
 - Dataset archive URL: `http://www.openslr.org/resources/33/data_aishell.tgz`
 - Dataset archive size: 15,582,913,665 bytes
-- Archive SHA-256:
+- Archive SHA-256: `a4a0313cde0a933e0e01a451f77de0a23d6c942f4694af5bb7f40b9dc38143fe`
+- Downloaded on Windows at `C:\\Users\\32112\\Downloads\\data_aishell.tgz`.
+- Official test candidates inspected: 7,176 utterances.
+- Frozen subset manifest: `subset.tsv`, exactly 100 utterances selected with seed `20261109`.
+- Selected WAV transfer bundle SHA-256: `b75de95ac62e701036dc2ecdb5cbca16c3df1b13034d867945f614d177bb264b`.
+- Selected WAVs and transcript were transferred to Linux and verified before inference.
+- Linux extracted data root: `/home/qwh/ASR_project/data/aishell1/extracted-test100/data_aishell`.
 - Extraction verification:
 - WeNet commit: `be6ad97fdb512589df113042f7ff3a29d392fb38`
 - Checkpoint SHA-256: `f368e24e6c84aaf770ffa36e6973596274de5288810315f9b9c5f4f4037fe16d`
