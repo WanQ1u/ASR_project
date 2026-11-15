@@ -150,6 +150,12 @@
 - `BAC009S0770W0143` 的参考文本含“商住用地”，但人工试听未听到“用”；其 CER 删除可能反映音频与参考转写不一致，不能直接归为模型识别错误。
 - C 批逐条错误现已被用于描述性分析，因此若后续根据这些观察改变模型、词表或解码方法，必须另建未见过的最终测试集，不能再将 C 作为改进后的盲测结果。
 
+## Rejected Context-Biasing Direction (2026-11-15)
+
+- Do not launch a hotword/context-biasing improvement experiment on the current AISHELL-1 setup.
+- Rationale: AISHELL-1 provides audio, transcripts, a lexicon, and speaker information, but no per-utterance domain/session metadata available before recognition. Selecting hotwords from a test transcript after the fact would leak reference information and would not represent a deployable context-biasing scenario.
+- The current fixed attention-rescoring baseline remains valid. Any future context-biasing study requires a dataset or product scenario with a legitimate, pre-recognition context source and a newly defined development/test protocol.
+
 ## WeNet checkpoint 路径兼容性（2026-11-09）
 
 - 官方 AISHELL U2++ checkpoint 的 `train.yaml` 保留了原始解压目录的相对路径：`exp/20210601_u2++_conformer_exp_aishell/units.txt` 和 `global_cmvn`。
