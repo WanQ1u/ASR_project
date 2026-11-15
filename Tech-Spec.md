@@ -29,6 +29,7 @@ The project Git repository tracks source, manifests, run records, and checksums 
 - Personal recordings are smoke-test inputs only and are excluded from CER reporting.
 - Before Week 2, one public AISHELL-1 subset and its manifest are frozen in version control.
 - The current development subset contains exactly 100 utterances from the official AISHELL-1 `test` split. Candidate utterance IDs are sorted lexicographically, then sampled without replacement with Python `random.Random(20261109)`. The resulting IDs and references are committed before inference.
+- Evaluation comparison protocol: A is the previously inspected 100-utterance development/error-analysis batch; B is a disjoint 100-utterance validation batch sampled from the remaining candidates with `random.Random(20261115)`; all candidate decoding strategies are compared on B; C is sampled only after the B strategy is frozen and is reserved for final confirmation.
 - The official AISHELL-1 test split is never used to choose a model, decoding setting, or training hyperparameter.
 - Any direct overlap between checkpoint training data and a reported evaluation set is explicitly labelled as in-domain benchmark evaluation.
 

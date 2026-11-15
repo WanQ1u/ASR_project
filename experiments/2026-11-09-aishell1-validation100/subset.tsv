@@ -1,0 +1,101 @@
+utterance_id	audio_path	reference_text	duration_seconds	source_split
+BAC009S0764W0130	data/aishell1/extracted-validation100/data_aishell/wav/test/S0764/BAC009S0764W0130.wav	北京  仅  新增  住宅  土地  供应  十  宗  	5.248000	aishell1-test
+BAC009S0764W0191	data/aishell1/extracted-validation100/data_aishell/wav/test/S0764/BAC009S0764W0191.wav	促使  我  国战  略  性  新兴  产业  发展  实现  了  良好  开局  	5.803937	aishell1-test
+BAC009S0764W0304	data/aishell1/extracted-validation100/data_aishell/wav/test/S0764/BAC009S0764W0304.wav	裁员  二千  人  是  由于  销售  模式  发生  改变  	4.845187	aishell1-test
+BAC009S0764W0333	data/aishell1/extracted-validation100/data_aishell/wav/test/S0764/BAC009S0764W0333.wav	因此  暂停  或  终止  这些  项目  	3.896937	aishell1-test
+BAC009S0764W0409	data/aishell1/extracted-validation100/data_aishell/wav/test/S0764/BAC009S0764W0409.wav	她  表示  最  重要  的  就  是  诚恳  	3.646000	aishell1-test
+BAC009S0764W0486	data/aishell1/extracted-validation100/data_aishell/wav/test/S0764/BAC009S0764W0486.wav	该  男子  因  影响  航班  正常  秩序  	3.642063	aishell1-test
+BAC009S0765W0134	data/aishell1/extracted-validation100/data_aishell/wav/test/S0765/BAC009S0765W0134.wav	我想  把  房产  留给  儿女  	3.083000	aishell1-test
+BAC009S0765W0420	data/aishell1/extracted-validation100/data_aishell/wav/test/S0765/BAC009S0765W0420.wav	引发  众多  粉丝  围堵  	2.937000	aishell1-test
+BAC009S0765W0489	data/aishell1/extracted-validation100/data_aishell/wav/test/S0765/BAC009S0765W0489.wav	联合  国  官方  微  博  晒  出  一  张  李  彬彬  喂  大象  喝水  的  照片  	5.916000	aishell1-test
+BAC009S0766W0177	data/aishell1/extracted-validation100/data_aishell/wav/test/S0766/BAC009S0766W0177.wav	今  久  又一  次  利用  资本  市场  	3.299000	aishell1-test
+BAC009S0766W0179	data/aishell1/extracted-validation100/data_aishell/wav/test/S0766/BAC009S0766W0179.wav	区域  产品  和  业务  三大  层面  	3.413000	aishell1-test
+BAC009S0766W0188	data/aishell1/extracted-validation100/data_aishell/wav/test/S0766/BAC009S0766W0188.wav	人民  银行  多次  提高  存款  准备金  率  和  存贷  款  基准  利率  	6.130000	aishell1-test
+BAC009S0766W0359	data/aishell1/extracted-validation100/data_aishell/wav/test/S0766/BAC009S0766W0359.wav	这  也  意味  着  最  晚  在明  年  的  各项  赛事  中  	4.271000	aishell1-test
+BAC009S0766W0362	data/aishell1/extracted-validation100/data_aishell/wav/test/S0766/BAC009S0766W0362.wav	萨维  申科  宣布  会  再  坚持  一  个  冬奥  会  周期  	5.062000	aishell1-test
+BAC009S0766W0453	data/aishell1/extracted-validation100/data_aishell/wav/test/S0766/BAC009S0766W0453.wav	李娜  不  想  大家  一直  记得  我  那  说明  中国  网球  没  突破  	5.663062	aishell1-test
+BAC009S0767W0155	data/aishell1/extracted-validation100/data_aishell/wav/test/S0767/BAC009S0767W0155.wav	各方  原因  的  叠加  导致  了  房企  拿  地量  的  明显  减少  	5.678063	aishell1-test
+BAC009S0767W0202	data/aishell1/extracted-validation100/data_aishell/wav/test/S0767/BAC009S0767W0202.wav	我  个人  是  这么  认  认识  的  	3.147937	aishell1-test
+BAC009S0767W0317	data/aishell1/extracted-validation100/data_aishell/wav/test/S0767/BAC009S0767W0317.wav	每日  经济  新闻  记者  注意  到  	3.519062	aishell1-test
+BAC009S0767W0320	data/aishell1/extracted-validation100/data_aishell/wav/test/S0767/BAC009S0767W0320.wav	上述  成飞  集成  人士  告诉  记者  	5.565938	aishell1-test
+BAC009S0767W0393	data/aishell1/extracted-validation100/data_aishell/wav/test/S0767/BAC009S0767W0393.wav	希望  能够  跟  大家  一  起  再次  站  在  领奖  台  上  	5.396937	aishell1-test
+BAC009S0767W0415	data/aishell1/extracted-validation100/data_aishell/wav/test/S0767/BAC009S0767W0415.wav	搜狐  娱乐  讯  据  香港  明晚  九月  十日  报道  	5.229000	aishell1-test
+BAC009S0768W0159	data/aishell1/extracted-validation100/data_aishell/wav/test/S0768/BAC009S0768W0159.wav	龙湖  即  以  低价  五  点  五亿  元  拿  地  	5.977062	aishell1-test
+BAC009S0768W0173	data/aishell1/extracted-validation100/data_aishell/wav/test/S0768/BAC009S0768W0173.wav	整体  平均  楼面  价  折合  一万  元  每平  方米  	7.409000	aishell1-test
+BAC009S0768W0255	data/aishell1/extracted-validation100/data_aishell/wav/test/S0768/BAC009S0768W0255.wav	它  的  雷达  可能  采用  了  双波  段  设计  	5.015000	aishell1-test
+BAC009S0768W0308	data/aishell1/extracted-validation100/data_aishell/wav/test/S0768/BAC009S0768W0308.wav	杨  某  等  四人  一同  在  深圳  成立  了  安丰  公司  	5.741187	aishell1-test
+BAC009S0768W0455	data/aishell1/extracted-validation100/data_aishell/wav/test/S0768/BAC009S0768W0455.wav	他们  怀疑  是有  人  在  村  里  养蛇  所致  	5.197000	aishell1-test
+BAC009S0769W0298	data/aishell1/extracted-validation100/data_aishell/wav/test/S0769/BAC009S0769W0298.wav	此外  还  将  与  美方  联手  研制  一款  升级  版  大  鸦  无  人机  	6.974938	aishell1-test
+BAC009S0769W0341	data/aishell1/extracted-validation100/data_aishell/wav/test/S0769/BAC009S0769W0341.wav	撑杆跳  丽萨  莱兹  奇  	4.262000	aishell1-test
+BAC009S0769W0452	data/aishell1/extracted-validation100/data_aishell/wav/test/S0769/BAC009S0769W0452.wav	和平  花苑  现已  更名  为  龙和  华府  	4.917000	aishell1-test
+BAC009S0770W0161	data/aishell1/extracted-validation100/data_aishell/wav/test/S0770/BAC009S0770W0161.wav	今年  房地  产  市场  地域  分化  将  加剧  	6.686063	aishell1-test
+BAC009S0770W0401	data/aishell1/extracted-validation100/data_aishell/wav/test/S0770/BAC009S0770W0401.wav	这  同样  需要  有效  的  办法  和  手段  	5.053937	aishell1-test
+BAC009S0770W0485	data/aishell1/extracted-validation100/data_aishell/wav/test/S0770/BAC009S0770W0485.wav	数百  名  乡邻  自发  赶来  送  他  一  程  	5.219000	aishell1-test
+BAC009S0901W0122	data/aishell1/extracted-validation100/data_aishell/wav/test/S0901/BAC009S0901W0122.wav	其  市管  国  管住  房  公积金  政策  也  均  进行  调整  	8.333000	aishell1-test
+BAC009S0901W0192	data/aishell1/extracted-validation100/data_aishell/wav/test/S0901/BAC009S0901W0192.wav	农村  劳动  力大  量  转移  	3.245938	aishell1-test
+BAC009S0901W0217	data/aishell1/extracted-validation100/data_aishell/wav/test/S0901/BAC009S0901W0217.wav	努力  探索  出  一  条  具有  中国  特色  的  农业  现代  化  道路  	5.900000	aishell1-test
+BAC009S0901W0326	data/aishell1/extracted-validation100/data_aishell/wav/test/S0901/BAC009S0901W0326.wav	公司  昨日  发布  公告  称  	2.932125	aishell1-test
+BAC009S0901W0329	data/aishell1/extracted-validation100/data_aishell/wav/test/S0901/BAC009S0901W0329.wav	共同  拓展  国内  云  计算  市场  	3.189938	aishell1-test
+BAC009S0901W0424	data/aishell1/extracted-validation100/data_aishell/wav/test/S0901/BAC009S0901W0424.wav	满脸  黑斑  与  大眼  袋  	3.402813	aishell1-test
+BAC009S0901W0455	data/aishell1/extracted-validation100/data_aishell/wav/test/S0901/BAC009S0901W0455.wav	记者  李  焜  染  摄  十三  日  早晨  	5.529750	aishell1-test
+BAC009S0902W0138	data/aishell1/extracted-validation100/data_aishell/wav/test/S0902/BAC009S0902W0138.wav	住房  公积金  贷款  因  其利  率  较  低  的  优势  	4.360938	aishell1-test
+BAC009S0902W0161	data/aishell1/extracted-validation100/data_aishell/wav/test/S0902/BAC009S0902W0161.wav	唯独  这样  才能  盘活  公积金  资源  	3.871000	aishell1-test
+BAC009S0902W0174	data/aishell1/extracted-validation100/data_aishell/wav/test/S0902/BAC009S0902W0174.wav	来自  广州  日报  的  报道  称  	3.476938	aishell1-test
+BAC009S0902W0189	data/aishell1/extracted-validation100/data_aishell/wav/test/S0902/BAC009S0902W0189.wav	农业  产业  体系  更  趋  完善  	4.844000	aishell1-test
+BAC009S0902W0243	data/aishell1/extracted-validation100/data_aishell/wav/test/S0902/BAC009S0902W0243.wav	支持  优势  产区  现代  化  鲜活  农产  品  批发  市场  建设  	5.605000	aishell1-test
+BAC009S0902W0291	data/aishell1/extracted-validation100/data_aishell/wav/test/S0902/BAC009S0902W0291.wav	在  类似  印度  之类  的  新兴  市场  	3.591063	aishell1-test
+BAC009S0902W0309	data/aishell1/extracted-validation100/data_aishell/wav/test/S0902/BAC009S0902W0309.wav	大盘股  仍是  毫无  作为  	2.838000	aishell1-test
+BAC009S0902W0414	data/aishell1/extracted-validation100/data_aishell/wav/test/S0902/BAC009S0902W0414.wav	搜狐  娱乐  讯  日前  	2.819812	aishell1-test
+BAC009S0903W0273	data/aishell1/extracted-validation100/data_aishell/wav/test/S0903/BAC009S0903W0273.wav	高频  交易  一直  饱受  诟病  	3.589125	aishell1-test
+BAC009S0903W0416	data/aishell1/extracted-validation100/data_aishell/wav/test/S0903/BAC009S0903W0416.wav	中新  网  七  月  二十八  日电  据  香港  明报  消息  	6.035875	aishell1-test
+BAC009S0904W0212	data/aishell1/extracted-validation100/data_aishell/wav/test/S0904/BAC009S0904W0212.wav	提高  生产  经营  和  市场  开拓  能力  	2.955938	aishell1-test
+BAC009S0904W0246	data/aishell1/extracted-validation100/data_aishell/wav/test/S0904/BAC009S0904W0246.wav	继续  实施  农村  沼气  工程  	3.079000	aishell1-test
+BAC009S0904W0274	data/aishell1/extracted-validation100/data_aishell/wav/test/S0904/BAC009S0904W0274.wav	规模  超大  的人  才  群体  更  是  创新  创造  无  与  伦比  的  重要  资源  	5.011938	aishell1-test
+BAC009S0904W0351	data/aishell1/extracted-validation100/data_aishell/wav/test/S0904/BAC009S0904W0351.wav	并且  介绍  自己  是  如何  通过  实战  调整  状态  而  渐  入  佳境  的  	5.068000	aishell1-test
+BAC009S0904W0475	data/aishell1/extracted-validation100/data_aishell/wav/test/S0904/BAC009S0904W0475.wav	温州  网讯  我  不  想死  后  给  后人  说  闲话  	3.501000	aishell1-test
+BAC009S0905W0263	data/aishell1/extracted-validation100/data_aishell/wav/test/S0905/BAC009S0905W0263.wav	也  能够  给  股票  市场  来  带  更多  兴奋  	5.485938	aishell1-test
+BAC009S0905W0428	data/aishell1/extracted-validation100/data_aishell/wav/test/S0905/BAC009S0905W0428.wav	对此  陈凯  琳  没  有  怪  责  陈  嘉宝  	5.695062	aishell1-test
+BAC009S0905W0450	data/aishell1/extracted-validation100/data_aishell/wav/test/S0905/BAC009S0905W0450.wav	温州  女  协  管  员  侮辱  环卫  工行  尸  走  肉  已  辞职  	7.115938	aishell1-test
+BAC009S0906W0254	data/aishell1/extracted-validation100/data_aishell/wav/test/S0906/BAC009S0906W0254.wav	无  止境  地  重复  过去  十年  的  惊人  增长  	4.704125	aishell1-test
+BAC009S0906W0315	data/aishell1/extracted-validation100/data_aishell/wav/test/S0906/BAC009S0906W0315.wav	而  绝  大多  数  漏洞  状态  都  是  未  联系  到  厂商  或  厂商  忽略  	6.386938	aishell1-test
+BAC009S0906W0324	data/aishell1/extracted-validation100/data_aishell/wav/test/S0906/BAC009S0906W0324.wav	要  跟  上  互联  网  发展  的  步伐  不  太  容易  	4.884062	aishell1-test
+BAC009S0906W0414	data/aishell1/extracted-validation100/data_aishell/wav/test/S0906/BAC009S0906W0414.wav	父女  恋  纸  包  不  住  火  	3.086937	aishell1-test
+BAC009S0907W0391	data/aishell1/extracted-validation100/data_aishell/wav/test/S0907/BAC009S0907W0391.wav	虽然  留  下  了  巨大  的  遗憾  	3.645062	aishell1-test
+BAC009S0907W0482	data/aishell1/extracted-validation100/data_aishell/wav/test/S0907/BAC009S0907W0482.wav	港媒  盘点  亚洲  千禧  一  代  十大  富豪  九  人  是  中国  人  	6.678937	aishell1-test
+BAC009S0908W0156	data/aishell1/extracted-validation100/data_aishell/wav/test/S0908/BAC009S0908W0156.wav	以北  京  去年  纯  商品  房  成交  结构  为  例  	5.379000	aishell1-test
+BAC009S0908W0157	data/aishell1/extracted-validation100/data_aishell/wav/test/S0908/BAC009S0908W0157.wav	一百  平均  单  套  总价  约  一百万  元  左右  	5.768000	aishell1-test
+BAC009S0908W0224	data/aishell1/extracted-validation100/data_aishell/wav/test/S0908/BAC009S0908W0224.wav	关于  印发  十二五  规划  的  通知  	3.836063	aishell1-test
+BAC009S0908W0322	data/aishell1/extracted-validation100/data_aishell/wav/test/S0908/BAC009S0908W0322.wav	两大  龙头  企业  格力  和海  尔  	3.857937	aishell1-test
+BAC009S0908W0323	data/aishell1/extracted-validation100/data_aishell/wav/test/S0908/BAC009S0908W0323.wav	格力  电器  一季  报  营收  为  二百四十五  亿元  	7.701875	aishell1-test
+BAC009S0908W0388	data/aishell1/extracted-validation100/data_aishell/wav/test/S0908/BAC009S0908W0388.wav	该  球队  在  官方  博客  上  	4.069813	aishell1-test
+BAC009S0908W0398	data/aishell1/extracted-validation100/data_aishell/wav/test/S0908/BAC009S0908W0398.wav	对此  莎宾娜  已经  做好  了  吃苦  的  心理  准备  	6.195062	aishell1-test
+BAC009S0908W0414	data/aishell1/extracted-validation100/data_aishell/wav/test/S0908/BAC009S0908W0414.wav	陈  奕迅  坦言  自己  一直  有  情绪  病  	4.601063	aishell1-test
+BAC009S0912W0148	data/aishell1/extracted-validation100/data_aishell/wav/test/S0912/BAC009S0912W0148.wav	为  安居  工程  建设  提供  了  资金  保障  	4.941000	aishell1-test
+BAC009S0912W0221	data/aishell1/extracted-validation100/data_aishell/wav/test/S0912/BAC009S0912W0221.wav	会议  讨论  进一步  加强  环境  保护  工作  的  意见  	5.904063	aishell1-test
+BAC009S0912W0376	data/aishell1/extracted-validation100/data_aishell/wav/test/S0912/BAC009S0912W0376.wav	用作  雪车  雪橇  大项  和  滑雪  大项  中  的  高山  滑雪  比赛  场地  	7.760000	aishell1-test
+BAC009S0912W0433	data/aishell1/extracted-validation100/data_aishell/wav/test/S0912/BAC009S0912W0433.wav	台  港  警方  追查  一  个  月  	3.366938	aishell1-test
+BAC009S0913W0190	data/aishell1/extracted-validation100/data_aishell/wav/test/S0913/BAC009S0913W0190.wav	国务院  国资  委  力挺  国企  	3.432000	aishell1-test
+BAC009S0913W0222	data/aishell1/extracted-validation100/data_aishell/wav/test/S0913/BAC009S0913W0222.wav	央  企  在  境外  投资  面临  的  问题  很多  	3.878062	aishell1-test
+BAC009S0913W0230	data/aishell1/extracted-validation100/data_aishell/wav/test/S0913/BAC009S0913W0230.wav	免征  蔬菜  流通  环节  的  增值  税  	3.626937	aishell1-test
+BAC009S0913W0315	data/aishell1/extracted-validation100/data_aishell/wav/test/S0913/BAC009S0913W0315.wav	原  压缩  机  事业  部  各  工厂  保持  不  变  	5.066063	aishell1-test
+BAC009S0913W0369	data/aishell1/extracted-validation100/data_aishell/wav/test/S0913/BAC009S0913W0369.wav	成为  本  届  残  运  会志  愿  服务  文化  的  重要  部分  	5.222875	aishell1-test
+BAC009S0913W0371	data/aishell1/extracted-validation100/data_aishell/wav/test/S0913/BAC009S0913W0371.wav	每天  忙碌  十三  个  小时  	3.000000	aishell1-test
+BAC009S0914W0164	data/aishell1/extracted-validation100/data_aishell/wav/test/S0914/BAC009S0914W0164.wav	外商  投资  房地  产  企业  注册  资本  与  投资  总额  比例  	7.978000	aishell1-test
+BAC009S0914W0186	data/aishell1/extracted-validation100/data_aishell/wav/test/S0914/BAC009S0914W0186.wav	对  购买  住房  的  数量  也  未  做  要求  	5.355937	aishell1-test
+BAC009S0914W0190	data/aishell1/extracted-validation100/data_aishell/wav/test/S0914/BAC009S0914W0190.wav	加大  涉农  贷款  投放  力度  	5.486125	aishell1-test
+BAC009S0914W0361	data/aishell1/extracted-validation100/data_aishell/wav/test/S0914/BAC009S0914W0361.wav	一  脸  痛苦  的  朱  婷  当即  被  换  下场  	4.975125	aishell1-test
+BAC009S0914W0409	data/aishell1/extracted-validation100/data_aishell/wav/test/S0914/BAC009S0914W0409.wav	马甲  线  啊  马甲  线  	2.706062	aishell1-test
+BAC009S0914W0435	data/aishell1/extracted-validation100/data_aishell/wav/test/S0914/BAC009S0914W0435.wav	已经  有  游客  迫  不  及  待  想  去  张家口  看看  了  	4.882062	aishell1-test
+BAC009S0914W0449	data/aishell1/extracted-validation100/data_aishell/wav/test/S0914/BAC009S0914W0449.wav	可是  我  遇见  这事  还  不  够  添  堵  的  呢  	4.183125	aishell1-test
+BAC009S0914W0467	data/aishell1/extracted-validation100/data_aishell/wav/test/S0914/BAC009S0914W0467.wav	事情  的  真相  完全  不  是  这样  的  	3.441187	aishell1-test
+BAC009S0915W0136	data/aishell1/extracted-validation100/data_aishell/wav/test/S0915/BAC009S0915W0136.wav	兰州  房地  产  市场  销量  增加  明显  	4.153000	aishell1-test
+BAC009S0915W0141	data/aishell1/extracted-validation100/data_aishell/wav/test/S0915/BAC009S0915W0141.wav	兰州  新建  住宅  价格  均  呈现  微  降  的  态势  	5.329000	aishell1-test
+BAC009S0915W0319	data/aishell1/extracted-validation100/data_aishell/wav/test/S0915/BAC009S0915W0319.wav	这  对  我们  来说  是  个  很大  的  挑战  	3.815937	aishell1-test
+BAC009S0915W0334	data/aishell1/extracted-validation100/data_aishell/wav/test/S0915/BAC009S0915W0334.wav	自动  化生  产  线  的  柔性  改造  也是  其  面临  的  一大  难题  	7.500000	aishell1-test
+BAC009S0915W0394	data/aishell1/extracted-validation100/data_aishell/wav/test/S0915/BAC009S0915W0394.wav	即  当  自己  轮转  到  前排  二  号  位  时  	3.970000	aishell1-test
+BAC009S0915W0465	data/aishell1/extracted-validation100/data_aishell/wav/test/S0915/BAC009S0915W0465.wav	数十  名  市民  赶到  越秀  区  一  酒家  维权  	4.783938	aishell1-test
+BAC009S0916W0157	data/aishell1/extracted-validation100/data_aishell/wav/test/S0916/BAC009S0916W0157.wav	产品  的  核心  是  客户  的  体验  	3.196000	aishell1-test
+BAC009S0916W0186	data/aishell1/extracted-validation100/data_aishell/wav/test/S0916/BAC009S0916W0186.wav	不  如  做  一款  实实  在  在  的  好  产品  	3.594000	aishell1-test
+BAC009S0916W0284	data/aishell1/extracted-validation100/data_aishell/wav/test/S0916/BAC009S0916W0284.wav	艾维  本  周四  晚  在  旧金山  现代  艺术  馆  向  大众  表示  	5.610000	aishell1-test
+BAC009S0916W0391	data/aishell1/extracted-validation100/data_aishell/wav/test/S0916/BAC009S0916W0391.wav	在  八月  二十六  日中  国  队  和  韩国  队  的  比赛  中  	4.845000	aishell1-test
+BAC009S0916W0453	data/aishell1/extracted-validation100/data_aishell/wav/test/S0916/BAC009S0916W0453.wav	事故  电梯  出厂  刚  满  一年  	3.717062	aishell1-test

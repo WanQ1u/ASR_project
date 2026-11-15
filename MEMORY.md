@@ -128,6 +128,13 @@
 - 使用完全相同的配置重复推理后，`baseline-run-1` 与 `baseline-run-2` 的 100 条预测逐行完全一致，当前基线具备基本可重复性。
 - 初步错误分析：69/100 条完全正确，31/100 条有错误；总错误为 63 次替换、1 次删除、0 次插入。代表性问题集中在同音/近音字、专有名词和低频长词串；仅凭文本对齐不能断定是声学问题还是语言模型/词汇问题。
 
+## AISHELL-1 B 验证集（2026-11-15）
+
+- 为比较 `ctc_greedy_search`、`ctc_prefix_beam_search` 和 `attention_rescoring`，从 A 批之外的 7,076 条候选中按 `random.Random(20261115)` 固定抽取 100 条。
+- B 清单与 A 批零重叠；Windows/Linux 清单 SHA-256 为 `cda302c9eb9de36017ad66916f1c812c5a5d50af479b488f0e904a5f6343a086`。
+- 100 个 B 批 WAV 已上传并在 Linux 解压验证；上传包 SHA-256 为 `7f0d2ce46f0e19ab49322ed7133f9415a44e0b27d61dc510234739872b693466`。
+- B 批尚未运行推理；C 最终测试批次尚未抽取。
+
 ## WeNet checkpoint 路径兼容性（2026-11-09）
 
 - 官方 AISHELL U2++ checkpoint 的 `train.yaml` 保留了原始解压目录的相对路径：`exp/20210601_u2++_conformer_exp_aishell/units.txt` 和 `global_cmvn`。
