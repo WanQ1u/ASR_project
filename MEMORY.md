@@ -137,6 +137,13 @@
 - B 批三种解码对照已完成：greedy 与 beam 的预测逐字节相同，CER 均为 6.24%（S=84，D=4，I=0）；attention rescoring 的 CER 为 6.17%（S=83，D=4，I=0）。三者均产生 100 条预测，单次 RTF 均约为 0.03。
 - B 批按最低 CER 选定 `attention_rescoring` 进入 C 最终确认；提升仅为 1 个字符、0.07 个百分点，不能在 C 比较前作强效果结论。C 尚未抽取。
 
+## AISHELL-1 C 最终确认集（2026-11-15）
+
+- 在 B 的选择冻结后，从排除 A、B 后剩余的 6,976 条候选中按 `random.Random(20261116)` 固定抽取 100 条。
+- C 清单与 A、B 均零重叠；Windows/Linux 清单 SHA-256 为 `f6bd004f8015a60a4d96842daf3d9ca4c4deeb2294bc67effcaed3d91cf85695`。
+- 100 个 C 批 WAV 已上传并在 Linux 解压验证；上传包 SHA-256 为 `95b0a1692d1a0b899270281db6c81cac77b840311f437b0212e4f4bfe3cb2e7e`。
+- C 批尚未运行推理；只比较 greedy 和已选定的 attention rescoring，不再基于 C 结果选择解码方式。
+
 ## WeNet checkpoint 路径兼容性（2026-11-09）
 
 - 官方 AISHELL U2++ checkpoint 的 `train.yaml` 保留了原始解压目录的相对路径：`exp/20210601_u2++_conformer_exp_aishell/units.txt` 和 `global_cmvn`。
