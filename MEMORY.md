@@ -1,7 +1,7 @@
 # 项目记忆
 
-- 最近更新：2026-11-08
-- 项目状态：基础环境与服务器操作阶段已完成；WeNet 源码已固定，正在进入依赖安装、checkpoint 获取和官方推理资格测试阶段；尚未运行任何 ASR 模型或 PyTorch 训练。
+- 最近更新：2026-11-15
+- 项目状态：WeNet AISHELL-1 U2++ Conformer 的官方推理、5 条 smoke test、A/B/C 三批固定子集评测已完成；当前已冻结 `attention_rescoring` 作为本项目此 checkpoint 的选定解码方式。尚未训练、微调或调参。
 
 ## 暂定方向
 
@@ -142,7 +142,10 @@
 - 在 B 的选择冻结后，从排除 A、B 后剩余的 6,976 条候选中按 `random.Random(20261116)` 固定抽取 100 条。
 - C 清单与 A、B 均零重叠；Windows/Linux 清单 SHA-256 为 `f6bd004f8015a60a4d96842daf3d9ca4c4deeb2294bc67effcaed3d91cf85695`。
 - 100 个 C 批 WAV 已上传并在 Linux 解压验证；上传包 SHA-256 为 `95b0a1692d1a0b899270281db6c81cac77b840311f437b0212e4f4bfe3cb2e7e`。
-- C 批尚未运行推理；只比较 greedy 和已选定的 attention rescoring，不再基于 C 结果选择解码方式。
+- C 批只比较 greedy 和 B 批已选定的 attention rescoring，且不再基于 C 结果重新选择解码方式。
+- C 批两种条件都完成 100/100 条预测，总音频时长为 516.006749 秒。greedy 的 CER 为 6.47%（N=1469，C=1375，S=91，D=3，I=1），墙钟时间为 6.193562 秒，RTF=0.012003。
+- attention rescoring 的 CER 为 6.06%（N=1469，C=1380，S=86，D=3，I=0），比 greedy 低 0.41 个百分点；墙钟时间为 28.814710 秒，RTF=0.055842，约为 greedy 的 4.65 倍。
+- B 和 C 两批均显示 attention rescoring 的 CER 低于 greedy；该结论只适用于此固定 AISHELL-1 in-domain 协议和当前 checkpoint，不外推为泛化能力结论。解码方式现已冻结，后续不再用 C 批比较或调参。
 
 ## WeNet checkpoint 路径兼容性（2026-11-09）
 
