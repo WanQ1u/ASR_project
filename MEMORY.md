@@ -134,6 +134,8 @@
 - B 清单与 A 批零重叠；Windows/Linux 清单 SHA-256 为 `cda302c9eb9de36017ad66916f1c812c5a5d50af479b488f0e904a5f6343a086`。
 - 100 个 B 批 WAV 已上传并在 Linux 解压验证；上传包 SHA-256 为 `7f0d2ce46f0e19ab49322ed7133f9415a44e0b27d61dc510234739872b693466`。
 - B 批尚未运行推理；C 最终测试批次尚未抽取。
+- B 批三种解码对照已完成：greedy 与 beam 的预测逐字节相同，CER 均为 6.24%（S=84，D=4，I=0）；attention rescoring 的 CER 为 6.17%（S=83，D=4，I=0）。三者均产生 100 条预测，单次 RTF 均约为 0.03。
+- B 批按最低 CER 选定 `attention_rescoring` 进入 C 最终确认；提升仅为 1 个字符、0.07 个百分点，不能在 C 比较前作强效果结论。C 尚未抽取。
 
 ## WeNet checkpoint 路径兼容性（2026-11-09）
 

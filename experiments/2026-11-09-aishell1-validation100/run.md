@@ -2,7 +2,7 @@
 
 ## Status
 
-Prepared and transferred. No prediction, CER, or per-utterance error has been inspected for this batch.
+Completed. Aggregate decoding metrics have been inspected; no per-utterance error analysis was used to select a mode.
 
 ## Role
 
@@ -28,3 +28,19 @@ This is the B validation batch for selecting one decoding strategy. It is disjoi
 ## Evaluation Protocol
 
 Run the same 100 utterances with `ctc_greedy_search`, `ctc_prefix_beam_search`, and `attention_rescoring`. Compare CER, S/D/I, wall-clock duration, and RTF before selecting one strategy. No C final-test batch is selected or evaluated until this choice is frozen.
+
+## Aggregate Results
+
+| Mode | CER | N | C | S | D | I | Wall-clock seconds | RTF |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| `ctc_greedy_search` | 6.24% | 1411 | 1323 | 84 | 4 | 0 | 15.036511 | 0.031600 |
+| `ctc_prefix_beam_search` | 6.24% | 1411 | 1323 | 84 | 4 | 0 | 13.781448 | 0.028962 |
+| `attention_rescoring` | 6.17% | 1411 | 1324 | 83 | 4 | 0 | 15.018033 | 0.031561 |
+
+- Every run produced 100 non-empty predictions.
+- The greedy and beam prediction files are byte-for-byte identical.
+- Attention rescoring has one fewer substitution than greedy and beam, reducing CER by 0.07 percentage points on this batch.
+
+## Selection
+
+`attention_rescoring` is frozen as the selected decoding strategy for C final confirmation because it has the lowest B-batch CER and does not show a runtime penalty in this single run. The observed gain is only one character; C must compare it with greedy before any stronger claim is made.
