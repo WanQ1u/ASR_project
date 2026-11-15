@@ -47,7 +47,7 @@ The B-selected `attention_rescoring` strategy also has the lower CER on this ind
 
 ## Text-Level Error Analysis
 
-This is a descriptive analysis of the final selected system, not evidence for an acoustic or language-model causal claim. No C-batch audio was listened to for this pass.
+This is a descriptive analysis of the final selected system, not evidence for an acoustic or language-model causal claim. Six representative C-batch clips were later listened to manually; those observations are recorded below and do not change the selected decoding strategy.
 
 - Exact predictions: 57 / 100 utterances.
 - Utterances with at least one character error: 43 / 100.
@@ -64,3 +64,16 @@ The 43 incorrect utterances were manually assigned one primary text-level patter
 | Deletion of a short segment | 3 | `商住用地` -> `商住地`; `她本人` -> `她本`; `内地产投资` -> `内地投资` |
 
 Compared with greedy, attention rescoring reduces total C-batch errors from 95 to 89. Its improvements are local corrections such as `站例` -> `站立`, `我爱五家` -> `我爱我家`, `实力调查` -> `实地调查`, and `再迎` -> `再也`; the highest-error rare-name and rare-phrase cases remain unresolved. Because this analysis now informs subsequent work, C must not be reused as the final blind test for a later changed system.
+
+## Manual Audio Audit
+
+These six clips were selected after C evaluation to illustrate different observed failure patterns. The listener observations are qualitative and do not prove a model-internal cause.
+
+| Utterance | Reference | Prediction | Listener observation |
+| --- | --- | --- | --- |
+| `BAC009S0766W0433` | `称一篇似是而非的文章` | `称一天四事而非的文章` | `一篇/一天` sound similar, but `似是而非` is a clear idiom; the final output is contextually implausible. |
+| `BAC009S0768W0288` | `美初裁中国产轮胎倾销` | `每出台中国产轮胎七星` | The recording is non-standard/ambiguous; `美初裁/每出台` sound similar and `美初裁` is lower frequency. The full predicted phrase remains semantically implausible. |
+| `BAC009S0770W0143` | `...商住用地和济南...` | `...商住地和济南...` | The listener did not hear `用` in the audio. This CER deletion may reflect a reference-transcript mismatch rather than a model recognition error. |
+| `BAC009S0770W0441` | `...封丘县留光镇...` | `...中秋县刘光镇...` | The salient error is the place-name substitution `封丘` -> `中秋`. |
+| `BAC009S0903W0224` | `推广土壤有机质提升测土配方施肥等培肥地力技术` | `推广土壤有机制提升侧土配方师肥等赔费地力技术` | A chain of agricultural terms is fragmented into near-sounding characters, consistent with insufficient long-phrase constraint. |
+| `BAC009S0913W0408` | `潘玮柏以侧颜出镜` | `潘玮博以测研出镜` | `侧颜/测研` are homophonous; the output is not a natural phrase despite `侧颜` being contextually plausible. |
