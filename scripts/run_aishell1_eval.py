@@ -38,11 +38,11 @@ def load_subset(path: Path, project_root: Path) -> list[Record]:
     return records
 
 
-def build_recognize_command(python: Path, wenet_root: Path, config: Path, checkpoint: Path, data_list: Path, result_dir: Path, gpu: int) -> list[str]:
+def build_recognize_command(python: Path, wenet_root: Path, config: Path, checkpoint: Path, data_list: Path, result_dir: Path, gpu: int, mode: str) -> list[str]:
     model_dir = config.parent
     return [
         str(python), str(wenet_root / "wenet" / "bin" / "recognize.py"),
-        "--gpu", str(gpu), "--modes", "ctc_greedy_search", "--config", str(config),
+        "--gpu", str(gpu), "--modes", mode, "--config", str(config),
         "--data_type", "raw", "--test_data", str(data_list), "--checkpoint", str(checkpoint),
         "--beam_size", "10", "--batch_size", "1", "--result_dir", str(result_dir),
         "--override_config", f"tokenizer_conf.symbol_table_path {model_dir / 'units.txt'}",
@@ -59,6 +59,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--result-dir", type=Path, required=True)
     parser.add_argument("--project-root", type=Path, default=Path.cwd())
     parser.add_argument("--gpu", type=int, default=0)
+    parser.add_argument("--mode", choices=["ctc_greedy_search", "ctc_prefix_beam_search", "attention_rescoring"], default="ctc_greedy_search")
     return parser.parse_args()
 
 
@@ -81,13 +82,13 @@ def main() -> int:
         for record in records:
             data_handle.write(json.dumps({"key": record.utterance_id, "wav": str(record.audio_path), "txt": record.reference_text}, ensure_ascii=False) + "\n")
             reference_handle.write(f"{record.utterance_id} {record.reference_text}\n")
-    command = build_recognize_command(Path(sys.executable), wenet_root, config, checkpoint, data_list.resolve(), args.result_dir.resolve(), args.gpu)
+    command = build_recognize_command(Path(sys.executable), wenet_root, config, checkpoint, data_list.resolve(), args.result_dir.resolve(), args.gpu, args.mode)
     started = time.perf_counter()
     completed = subprocess.run(command, cwd=wenet_root, check=False)
     elapsed_seconds = time.perf_counter() - started
     if completed.returncode != 0:
         return completed.returncode
-    predictions = args.result_dir / "ctc_greedy_search" / "text"
+    predictions = args.result_dir / args.mode / "text"
     prediction_map = {}
     for line in predictions.read_text(encoding="utf-8").splitlines():
         fields = line.split(maxsplit=1)
@@ -97,7 +98,7 @@ def main() -> int:
     expected_ids = {record.utterance_id for record in records}
     if set(prediction_map) != expected_ids:
         raise ValueError(f"expected {len(expected_ids)} predictions, got {len(prediction_map)}")
-    with (args.result_dir / "ctc_greedy_search" / "cer.txt").open("w", encoding="utf-8") as handle:
+    with (args.result_dir / args.mode / "cer.txt").open("w", encoding="utf-8") as handle:
         subprocess.run([str(Path(sys.executable)), str(wenet_root / "tools" / "compute-wer.py"), "--char=1", "--v=0", str(references), str(predictions)], check=True, stdout=handle)
     audio_seconds = sum(record.duration_seconds for record in records)
     metrics = {"input_count": len(records), "audio_seconds": audio_seconds, "wall_clock_seconds": elapsed_seconds, "rtf": elapsed_seconds / audio_seconds}

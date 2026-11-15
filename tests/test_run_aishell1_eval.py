@@ -39,11 +39,28 @@ class RunAishell1EvalTests(unittest.TestCase):
             data_list=self.root / "logs" / "data.list",
             result_dir=self.root / "logs",
             gpu=0,
+            mode="ctc_greedy_search",
         )
 
         self.assertIn("tokenizer_conf.symbol_table_path " + str(model_dir / "units.txt"), command)
         self.assertIn("cmvn_conf.cmvn_file " + str(model_dir / "global_cmvn"), command)
         self.assertEqual(command[0], str(Path("/venv/bin/python")))
+
+    def test_build_recognize_command_uses_requested_mode(self) -> None:
+        model_dir = self.root / "models" / "checkpoint"
+        command = build_recognize_command(
+            python=Path("/venv/bin/python"),
+            wenet_root=self.root / "third_party" / "wenet",
+            config=model_dir / "train.yaml",
+            checkpoint=model_dir / "final.pt",
+            data_list=self.root / "logs" / "data.list",
+            result_dir=self.root / "logs",
+            gpu=0,
+            mode="attention_rescoring",
+        )
+
+        self.assertIn("--modes", command)
+        self.assertEqual(command[command.index("--modes") + 1], "attention_rescoring")
 
 
 if __name__ == "__main__":
