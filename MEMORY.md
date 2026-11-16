@@ -155,6 +155,10 @@
 - The qualification target is a short run on a small manifest: data loading, forward pass, loss, backpropagation, checkpoint saving, and dev-loss evaluation.
 - The Windows `data_aishell.tgz` archive is available and verified; Linux currently has only the 100-utterance evaluation subsets and incomplete download remnants, so the full archive must be transferred before preparation.
 - The downloaded pretrained `models/20210601_u2++_conformer_exp_aishell/final.pt` must remain unchanged; qualification checkpoints belong under a new Linux experiment directory.
+- The full Windows `data_aishell.tgz` archive was transferred to Linux as `data/aishell1/downloads/data_aishell-full.tgz`; Linux SHA-256 matches the Windows value `a4a0313cde0a933e0e01a451f77de0a23d6c942f4694af5bb7f40b9dc38143fe`.
+- The archive was expanded under the ignored Linux path `data/aishell1/full/`; the official AISHELL preparation found exactly 141,925 WAV files and produced `train=120,098`, `dev=14,326`, and `test=7,176` raw manifests, a 4,233-line character dictionary, and a valid training CMVN file.
+- Qualification manifests contain 64 train and 32 dev utterances under the ignored Linux path `data/aishell1/qualification/`. One single-GPU epoch completed 32 training steps and dev evaluation with `cv_loss=340.69152092211175`; `init.pt` and `epoch_0.pt` were written, and `final.pt` was corrected to link to `epoch_0.pt` because this WeNet revision emitted a broken `0.pt` link.
+- The qualification run disabled `dataset_conf.speed_perturb` because torchaudio 2.9 no longer exposes the old `torchaudio.sox_effects` API. This is an environment compatibility qualification, not a formal training result. `deepspeed` and `tensorboardX` were installed in `.conda`; the `.conda/bin/torchrun` wrapper still points to the deleted legacy environment, so future runs should use `python -m torch.distributed.run` or repair that wrapper.
 
 ## Rejected Context-Biasing Direction (2026-11-15)
 
