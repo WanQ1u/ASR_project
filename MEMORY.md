@@ -133,9 +133,8 @@
 - 为比较 `ctc_greedy_search`、`ctc_prefix_beam_search` 和 `attention_rescoring`，从 A 批之外的 7,076 条候选中按 `random.Random(20261115)` 固定抽取 100 条。
 - B 清单与 A 批零重叠；Windows/Linux 清单 SHA-256 为 `cda302c9eb9de36017ad66916f1c812c5a5d50af479b488f0e904a5f6343a086`。
 - 100 个 B 批 WAV 已上传并在 Linux 解压验证；上传包 SHA-256 为 `7f0d2ce46f0e19ab49322ed7133f9415a44e0b27d61dc510234739872b693466`。
-- B 批尚未运行推理；C 最终测试批次尚未抽取。
 - B 批三种解码对照已完成：greedy 与 beam 的预测逐字节相同，CER 均为 6.24%（S=84，D=4，I=0）；attention rescoring 的 CER 为 6.17%（S=83，D=4，I=0）。三者均产生 100 条预测，单次 RTF 均约为 0.03。
-- B 批按最低 CER 选定 `attention_rescoring` 进入 C 最终确认；提升仅为 1 个字符、0.07 个百分点，不能在 C 比较前作强效果结论。C 尚未抽取。
+- B 批按最低 CER 选定 `attention_rescoring` 进入 C 最终确认；提升仅为 1 个字符、0.07 个百分点，不能据此作强效果结论。
 
 ## AISHELL-1 C 最终确认集（2026-11-15）
 
@@ -149,6 +148,13 @@
 - C 批的最终方案文本级错误分析已完成：57/100 条完全正确，43/100 条至少含一个错误；89 个字符错误由 86 个替换和 3 个删除构成。主要表现为专有名词/罕见命名串、同音或近音的字词替代、低频领域短语和少量短片段删除。随后试听了 6 条代表样本；这提供了定性证据，但仍不能仅据此断定模型内部错误属于声学或语言建模原因。
 - `BAC009S0770W0143` 的参考文本含“商住用地”，但人工试听未听到“用”；其 CER 删除可能反映音频与参考转写不一致，不能直接归为模型识别错误。
 - C 批逐条错误现已被用于描述性分析，因此若后续根据这些观察改变模型、词表或解码方法，必须另建未见过的最终测试集，不能再将 C 作为改进后的盲测结果。
+
+## Training Qualification Validation (2026-11-16)
+
+- The next step is an engineering qualification check for the WeNet AISHELL-1 training loop, not a formal ASR result and not yet a machine-unlearning experiment.
+- The qualification target is a short run on a small manifest: data loading, forward pass, loss, backpropagation, checkpoint saving, and dev-loss evaluation.
+- The Windows `data_aishell.tgz` archive is available and verified; Linux currently has only the 100-utterance evaluation subsets and incomplete download remnants, so the full archive must be transferred before preparation.
+- The downloaded pretrained `models/20210601_u2++_conformer_exp_aishell/final.pt` must remain unchanged; qualification checkpoints belong under a new Linux experiment directory.
 
 ## Rejected Context-Biasing Direction (2026-11-15)
 
